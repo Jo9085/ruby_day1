@@ -5,7 +5,8 @@ pyr_nb = pyr_nb.to_i
 pyram = Array.new
 
 pyr_nb.times do |i|
-    pyram [pyr_nb - i - 1] = "X"
+    pyram [pyr_nb - i] = "X"
+    pyram [pyr_nb + i] = "X"
 
     pyr_nb.times do |i|
         if pyram[i]== nil
@@ -15,4 +16,3 @@ pyr_nb.times do |i|
 
     puts "#{pyram.join}"
 end
-
